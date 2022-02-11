@@ -3,20 +3,9 @@
 <title>OK</title>
 <script>
 
-const options = {
-	method: 'GET',
-	mode: 'cors',
-	cache: 'default',
-	headers: new Headers().append('Content-Type', 'application/json')
-}
+const url = 'https://script.google.com/macros/s/AKfycbyxa4uLIKsfTPl8iSeto8drb-IvEv5TWQ-q_SS3Y1ff_hNLgrnxUyW7KOwQ9xYBEQgT/exec';
 
-const url = 'https://script.google.com/macros/s/AKfycbyxa4uLIKsfTPl8iSeto8drb-IvEv5TWQ-q_SS3Y1ff_hNLgrnxUyW7KOwQ9xYBEQgT/exec'
-
-fetch(url, options)
-
-.then(response => response.json())
-
-.catch(e => console.log('ERRO: '+e))
+fetch(url).then(response => {document.body.innerHTML = response.json()})
 
 </script>
 
