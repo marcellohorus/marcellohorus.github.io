@@ -1,12 +1,12 @@
 <html>
 <head>
 <title>OK</title>
+<meta http-equiv="content-type" content="application/json"/>
+
 <script>
-
 const url = 'https://script.google.com/macros/s/AKfycbyxa4uLIKsfTPl8iSeto8drb-IvEv5TWQ-q_SS3Y1ff_hNLgrnxUyW7KOwQ9xYBEQgT/exec';
-
-fetch(url).then(response => {document.body.innerHTML = response.json()})
-
+var dados = null;
+fetch(url).then(response => response.json()).then(data => dados = data);
 </script>
 
 </head>
