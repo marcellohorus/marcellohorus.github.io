@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>OK</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+
+const options = {
+	'method': 'GET',
+	'mode': 'cors',
+	'cache': 'default',
+	'Content-Type': 'application/json',
+}
+
+const url = 'https://script.google.com/macros/s/AKfycbyxa4uLIKsfTPl8iSeto8drb-IvEv5TWQ-q_SS3Y1ff_hNLgrnxUyW7KOwQ9xYBEQgT/exec'
+
+fetch(url, options)
+
+.then(response => response.json().then(data => document.body.innerHTML = JSON.stringify(data)))
+
+.catch(e => console.log('ERRO: '+e))
+
+</script>
+
+</head>
+<body>
+</body>
+</html>
